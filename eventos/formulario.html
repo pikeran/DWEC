@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="formulario.css" />
+    <script src="formulario.js"></script>
+</head>
+
+<body>
+
+
+    <form>
+        <div class="Nombre">
+            <label>Nombre:</label>
+            <input onblur="validar(this.value)" />
+        </div>
+        <div class="Apellidos">
+            <label>Apellidos:</label>
+            <input onblur="validar(this.value)" />
+            <br>
+        </div>
+        <div class="e-mail">
+            <label>e-mail:</label>
+            <input id = "email" onblur="PedirCorreo(this.value)" />
+            <br>
+        </div>
+        <div class="DNI">
+            <label>DNI:</label>
+            <input id="dni" onblur="PedirDni(this.value)" />
+            <br>
+        </div>
+        <div class="Password">
+            <label>Password:</label>
+            <input onblur="validar(this.value)" />
+            <br>
+        </div>
+        <div class="rep">
+            <label>Repetir password:</label>
+            <input onblur="validar(this.value)" />
+            <br>
+        </div>
+        <div class="IP">
+            <label>IP Equipo:</label>
+            <input onblur="validar(this.value)" />
+            <br>
+        </div>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
