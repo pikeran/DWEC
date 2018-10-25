@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>ejercicio 09</title>
+        <script type="text/javascript">
+            function cargar() {
+                document.getElementById("prueba").addEventListener("click",function(evento) {
+                    alert(evento.screenX);
+                },false)
+            }
+            document.addEventListener("DOMContentLoaded",cargar,false);
+            alert("cargado");
+        </script>
+    </head>
+    <body onload="cargar2()">
+        <div id="prueba" style="width:100px;height:100px;background-color:red;">
+            
+        </div>
+    </body>
+</html>

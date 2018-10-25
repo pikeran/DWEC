@@ -1,0 +1,8 @@
+.central{
+    position: absolute;    
+    height: 300;    
+    width: 300;
+    background-color: brown;
+    left: 35%;
+    top: 15%;
+}
