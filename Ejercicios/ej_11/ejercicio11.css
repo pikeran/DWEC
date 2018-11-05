@@ -1,0 +1,16 @@
+#fila{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: brown;
+}
+input{
+    height: 50px;
+    width: 200px;
+}
+#enviar{
+    float: right;
+}
+label{
+    color:white;
+}
