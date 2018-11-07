@@ -7,6 +7,17 @@
     width: 600px;
     height: 600px;
     background-color: brown;
+    border: solid black 1px;
+}
+#derecho{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-color: brown;
+    top:50%;
+    margin-top:-300;
+    left: 1100;
+    border: solid black 1px;
 }
 video{
     position: relative;
@@ -21,10 +32,21 @@ video{
     top:-115;
     left: 50;
     background-color: white;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;   
+    border: solid black 1px;
+}
+#barra-progreso{
+    position: relative;
+    border: solid black 1px;
+    width: 500px;
+    height: 20px;
+    left: 50;
+    top: -185;
+    background-color: white;
+}
+#progreso{
+    position: relative;
+    height: 10px;
+    background-color: crimson;
 }
 #barra-reproduccion button{
    position: relative;
@@ -32,4 +54,32 @@ video{
    width: 70px; 
    top:5;
    left:30;
+}
+#derecho div{
+    top:30;
+    left: 30;
+}
+#derecho img{
+    border: solid black 1px;
+}
+#contenedor-1{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: aliceblue;
+    border: solid black 0.5px;
+}
+#contenedor-2{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: aliceblue;
+    border: solid black 0.5px;
+}
+#contenedor-3{
+    position: relative;
+    width: 300px;
+    height: 225px;
+    background-color: aliceblue;
+    border: solid black 0.5px;
 }
