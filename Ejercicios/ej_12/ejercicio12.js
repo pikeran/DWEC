@@ -2,7 +2,9 @@ window.addEventListener("load",cargar,false);
 
 function cargar(){
     console.log("Pagina cargada...");
-    
+      
+
+
     document.getElementById("play").addEventListener("click",playVideo,false);
     document.getElementById("atras").addEventListener("click",atrasVideo,false);
     document.getElementById("pausa").addEventListener("click",pauseVideo,false);
@@ -10,37 +12,53 @@ function cargar(){
     document.getElementById("vol-up").addEventListener("click",subirVolumen,false);
     document.getElementById("vol-down").addEventListener("click",bajarVolumen,false);
     document.getElementById("video-01").addEventListener("timeupdate",actualizarBarra,false);
-    document.getElementById("contenedor-1").addEventListener("mouseover",difuminar,false);
-    document.getElementById("contenedor-2").addEventListener("mouseover",difuminar,false);
-    document.getElementById("contenedor-3").addEventListener("mouseover",difuminar,false); 
-    document.getElementById("contenedor-1").addEventListener("mouseout",offDifuminar,false);
-    document.getElementById("contenedor-2").addEventListener("mouseout",offDifuminar,false);
-    document.getElementById("contenedor-3").addEventListener("mouseout",offDifuminar,false); 
-    document.getElementById("contenedor-1").addEventListener("click",cambiarVideo,false);
-    document.getElementById("contenedor-2").addEventListener("click",cambiarVideo,false);
-    document.getElementById("contenedor-3").addEventListener("click",cambiarVideo,false);
+    //TODO
+    /* document.getElementById("video-02").addEventListener("mouseover",focusOscuro,false);
+    document.getElementById("video-03").addEventListener("mouseover",focusOscuro,false);
+    document.getElementById("video-04").addEventListener("mouseover",focusOscuro,false);
+    document.getElementById("video-02").addEventListener("mouseout",onfocusOscuro,false);
+    document.getElementById("video-03").addEventListener("mouseout",onfocusOscuro,false);
+    document.getElementById("video-04").addEventListener("mouseout",onfocusOscuro,false); */
+    /* document.getElementById("escape").addEventListener("click",finalizarPubli,false); */
+    document.getElementById("video-02").addEventListener("click",cambiarVideo,false);
+    document.getElementById("video-03").addEventListener("click",cambiarVideo,false);
+    document.getElementById("video-04").addEventListener("click",cambiarVideo,false);
+
+    portadaVideo();
+    
+
+     
 }
 var videoReproductor = "video-01";
+function finalizarPubli(){
 
+}
+function publi(){
 
+}
+function portadaVideo(){
+    var multimedia2 = document.getElementById("video-02");
+    var multimedia3 = document.getElementById("video-03");
+    var multimedia4 = document.getElementById("video-04");
+
+    multimedia2.currentTime = 50;
+    multimedia3.currentTime = 50;
+    multimedia4.currentTime = 50;
+
+}
 function obtenerVideo() {
     var multimedia = document.getElementById(videoReproductor); 
     return multimedia;
 }
 function cambiarVideo(){
-    elemento = this.id;
+    secundarioSrc = this.src;
     multimedia = obtenerVideo();
     principalSrc = multimedia.src;
-    alert(principalSrc);
-}
-function offDifuminar(){
-    document.body.style.cursor = "auto";
-    this.style.opacity=100;
-}
-function difuminar(){ 
-    document.body.style.cursor = "Pointer";
-    this.style.opacity=(50/100)-0.01;
-}
+    this.src = principalSrc;
+    multimedia.src = secundarioSrc;
+    portadaVideo();
+} 
+
 //A mano compañero:
 function actualizarBarra(){
     multimedia = obtenerVideo();
