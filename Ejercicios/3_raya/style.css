@@ -1,0 +1,80 @@
+#main-container{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    top:20px;
+    transition: width .5s;
+    left: calc(50% - 400px);
+    border: solid black 1px;
+}
+#tablero{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    transition: top,left 1s;
+    left:calc(50% - 250px);
+    top:calc(50% - 200px);
+    border: solid black 1px;
+}
+#play{
+    position: absolute;
+    z-index: 10;
+    left:calc(50% - 35px);
+    top:10px;
+    width: 70px;
+    height: 70px;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+#tablero button{
+    float: left;
+    height: 133px;
+    width: 166px;
+}
+.neutro{
+}
+.positivo{
+background-image: url("draven.png");
+background-size: 95%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.positivo button{
+
+}
+.negativo button{
+    
+}
+.negativo{
+background-image: url("riven.png");
+background-size: 95%;
+background-repeat: no-repeat;
+background-position: center;
+}
+@media screen and (max-width: 800px) {
+    
+    #main-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: solid black 1px;
+    }
+    #tablero{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: width,height,top,left 1s;
+        top: 0;
+        left: 0;
+        border: solid black 1px;
+    }
+    #tablero button{
+        float: left;
+        height: 33.3%;
+        width: 33.3%;
+    } 
+    
+    
+  }

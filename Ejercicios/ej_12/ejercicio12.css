@@ -54,10 +54,10 @@
 #barra-progreso{
     position: relative;
     border: solid black 1px;
-    width: 500px;
+    width: 498px;
     height: 20px;
+    top: 370px;
     left: 50;
-    top: -185;
     background-color: white;
 }
 #progreso{
