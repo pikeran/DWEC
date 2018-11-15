@@ -9,7 +9,7 @@ function IniciarJuego(){
 
 function cargar(){
     console.log("Pagina cargada...")
-    
+    prepararTablero();
     document.getElementById("c00").addEventListener("click",rondaJuego,false);
     document.getElementById("c01").addEventListener("click",rondaJuego,false);
     document.getElementById("c02").addEventListener("click",rondaJuego,false);
@@ -21,7 +21,15 @@ function cargar(){
     document.getElementById("c22").addEventListener("click",rondaJuego,false);
     matriz = document.getElementsByClassName("neutro");
 }
+function prepararTablero(){
 
+    document.getElementById("play").className = "desplazamiento";
+    document.getElementById("capa").className = "capa-class-2"
+    setTimeout(function(){
+        document.getElementById("capa").style.display = "none";
+    },1000);
+
+}
 function rondaJuego(){
     
 

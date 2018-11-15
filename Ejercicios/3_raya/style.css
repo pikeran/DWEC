@@ -1,3 +1,6 @@
+body{
+    background: url("fondo.jpg");
+}
 #main-container{
     position: relative;
     width: 800px;
@@ -6,6 +9,9 @@
     transition: width .5s;
     left: calc(50% - 400px);
     border: solid black 1px;
+    background: url("tablero.jpg");
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
 }
 #tablero{
     position: absolute;
@@ -15,17 +21,25 @@
     left:calc(50% - 250px);
     top:calc(50% - 200px);
     border: solid black 1px;
+    
 }
 #play{
+    background-image: url("play.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
-    z-index: 10;
-    left:calc(50% - 35px);
+    z-index: 12;
     top:10px;
     width: 70px;
     height: 70px;
-    background-color: greenyellow;
     border-radius: 50%;
 }
+
+.preDesplazamiento {
+    left:calc(50% - 35px);
+}
+
 #tablero button{
     float: left;
     height: 133px;
@@ -38,19 +52,57 @@ background-image: url("draven.png");
 background-size: 95%;
 background-repeat: no-repeat;
 background-position: center;
-}
-.positivo button{
+background-color: red;
+transition: background-color 1000ms linear;
 
-}
-.negativo button{
-    
 }
 .negativo{
 background-image: url("riven.png");
 background-size: 95%;
 background-repeat: no-repeat;
 background-position: center;
+background-color:greenyellow;
+transition: background-color 1000ms linear;
+
 }
+
+
+#capa{
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height:100%;
+    
+}
+.desplazamiento {
+    animation-duration: 1s;
+    animation-name: slidein;
+    left:100%;
+  }
+  
+  @keyframes slidein {
+    from {left:calc(50% - 35px)}
+    25%{left:calc(50% - 300px)}
+    to { left:100%}
+  }
+
+.capa-class{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.capa-class-2{
+    animation-duration: 1s;
+    animation-name: capa;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+@keyframes capa {
+    from { opacity:100;}
+    25%{ opacity: 50;}
+    to { opacity: 0;}
+  }
+
+
 @media screen and (max-width: 800px) {
     
     #main-container{
@@ -74,7 +126,5 @@ background-position: center;
         float: left;
         height: 33.3%;
         width: 33.3%;
-    } 
-    
-    
-  }
+    }
+}
