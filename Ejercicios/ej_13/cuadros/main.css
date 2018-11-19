@@ -1,0 +1,5 @@
+canvas{
+    position: relative;
+    left: calc(50% - 200px);
+    border:solid black 1px;
+}
